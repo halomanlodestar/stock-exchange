@@ -8,6 +8,7 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
+
 add_library(exchange_project INTERFACE)
 
 target_include_directories(
@@ -54,13 +55,6 @@ target_link_libraries(
   trader_terminal
   PRIVATE
     exchange_project 
-)
-
-set_target_properties(
-  liquidity_bot
-  PROPERTIES
-    OUTPUT_NAME "liquidity_bot"
-    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/tools"
 )
 
 add_executable(
