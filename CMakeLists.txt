@@ -8,7 +8,6 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-
 add_library(exchange_project INTERFACE)
 
 target_include_directories(
@@ -43,7 +42,7 @@ set_target_properties(
   exchange
   PROPERTIES
     OUTPUT_NAME "exchange"
-    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/tools"
+    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/src"
 )
 
 add_executable(
@@ -55,6 +54,13 @@ target_link_libraries(
   trader_terminal
   PRIVATE
     exchange_project 
+)
+
+set_target_properties(
+    trader_terminal
+    PROPERTIES
+        OUTPUT_NAME "trader_terminal"
+        RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/tools"
 )
 
 add_executable(
