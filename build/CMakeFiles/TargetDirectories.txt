@@ -1,5 +1,0 @@
-/home/kunal_rana/code/cpp/stock_exchange/build/CMakeFiles/exchange.dir
-/home/kunal_rana/code/cpp/stock_exchange/build/CMakeFiles/trader_terminal.dir
-/home/kunal_rana/code/cpp/stock_exchange/build/CMakeFiles/liquidity_bot.dir
-/home/kunal_rana/code/cpp/stock_exchange/build/CMakeFiles/edit_cache.dir
-/home/kunal_rana/code/cpp/stock_exchange/build/CMakeFiles/rebuild_cache.dir
