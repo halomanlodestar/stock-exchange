@@ -1,3 +1,4 @@
+#pragma once
 
 #include <algorithm>
 #include <array>
@@ -42,7 +43,7 @@ enum class OrderStatus : std::uint8_t {
   ACCEPTED,
   PARTIALLY_FILLED,
   FILLED,
-  CANCELLED
+  CANCELED
 };
 
 using Symbol = std::array<char, 8>;
