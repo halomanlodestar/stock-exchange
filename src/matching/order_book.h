@@ -813,8 +813,7 @@ private:
     }
 
     push_event(Event::make(OrderPartiallyFilled{
-        .sequence_number = next_sequence(), // TODO: ADD Sequence number when
-                                            // Sequencer is added!
+        .sequence_number = next_sequence(), // TODO: ADD Sequence
         .timestamp = timestamp,
         .order_id = passive.id,
         .filled_qty = filled_qty,
@@ -835,8 +834,7 @@ private:
 
   void emit_accepted(core::Timestamp timestamp, const Order &order) {
     push_event(Event::make(OrderAccepted{
-        .sequence_number = next_sequence(), // TODO: ADD Sequence number when
-                                            // Sequencer is added!
+        .sequence_number = next_sequence(), // TODO: ADD Sequence
         .timestamp = timestamp,
         .order_id = order.id,
         .symbol = symbol_,
@@ -876,8 +874,7 @@ private:
   void emit_rejected(core::Timestamp timestamp, core::OrderId order_id,
                      ReasonCode reason) {
     push_event(Event::make(OrderRejected{
-        .sequence_number = next_sequence(), // TODO: ADD Sequence number when
-                                            // Sequencer is added!
+        .sequence_number = next_sequence(), // TODO: ADD Sequence
         .timestamp = timestamp,
         .order_id = order_id,
         .reason_code = reason,
